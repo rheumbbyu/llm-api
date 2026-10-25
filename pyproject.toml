@@ -1,0 +1,23 @@
+[project]
+name = "llm-api"
+version = "0.1.0"
+description = "FastAPI LLM inference API built for the Week 3B workshop"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi[standard]>=0.128.8",
+    "slowapi>=0.1.10",
+    "uvicorn>=0.39.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.4.2",
+    "ruff>=0.17.2",
+]
+
+[tool.uv.workspace]
+members = [
+    "llm-api",
+]
